@@ -1,0 +1,30 @@
+name = "KernelIntrinsics"
+uuid = "f9588fbb-d238-4998-b15a-468e8766d49a"
+version = "0.1.6"
+authors = ["anonymous0746 <anonymous0746@users.noreply.github.com>"]
+
+[deps]
+KernelAbstractions = "63c18a36-062a-441e-b654-da1e3ab1ce7c"
+LLVM = "929cbde3-209d-540e-8aea-75f648917ca0"
+
+[weakdeps]
+AMDGPU = "21141c5a-9bdb-4563-92ae-f87d6854732e"
+CUDA = "052768ef-5323-5732-b1bb-66c8b64840ba"
+
+[extensions]
+KernelIntrinsicsAMDGPUExt = "AMDGPU"
+KernelIntrinsicsCUDAExt = "CUDA"
+
+[compat]
+AMDGPU = "1"
+CUDA = "5.9"
+KernelAbstractions = "0.9.38"
+LLVM = "9"
+julia = "1.10"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+
+[targets]
+test = ["Pkg", "Test"]
